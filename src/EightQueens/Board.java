@@ -8,7 +8,6 @@ public class Board {
 
     public int boardSize = 8;
     public Queen[] queens = new Queen[boardSize];
-    public int h;
     private int[][] board = new int[boardSize][boardSize];
 
     public Board() {
@@ -33,14 +32,7 @@ public class Board {
     public Board(Board b) {
         this.queens = b.getQueens();
         this.board = b.getBoard();
-    }
-
-    public int getBoardSize() {
-        return boardSize;
-    }
-
-    public void setBoardSize(int boardSize) {
-        this.boardSize = boardSize;
+        this.boardSize = b.boardSize;
     }
 
     public int[][] getBoard() {
