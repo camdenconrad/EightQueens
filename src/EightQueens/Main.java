@@ -12,7 +12,7 @@ public class Main {
 
         int conflicts = Helper.findConflicts(neighbor.getQueens());
         while (conflicts > 0) {
-            System.out.println("Current h: " + conflicts);
+            System.out.println("Current h (conflicts): " + conflicts);
             System.out.println("Current State");
 
             neighbor = Helper.bestNeighbor(new NeighborStates(neighbor).getStates());
@@ -32,7 +32,7 @@ public class Main {
             conflicts = Helper.findConflicts(neighbor.getQueens());
         }
 
-        System.out.println("Current h: " + conflicts);
+        System.out.println("Current h (conflicts): " + conflicts);
         System.out.println("\nCurrent State");
 
         System.out.print(neighbor.printBoard());

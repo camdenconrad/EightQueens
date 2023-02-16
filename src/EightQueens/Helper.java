@@ -12,7 +12,7 @@ public class Helper {
 
     public static boolean inConflict(Point p1, Point p2) {
 
-        double slope = (p2.getY() - p1.getY()) / (p2.getX() - p1.getX());
+        double slope = (short) (p2.getY() - p1.getY()) / (p2.getX() - p1.getX());
 
         double rads = Math.atan(slope);
 
