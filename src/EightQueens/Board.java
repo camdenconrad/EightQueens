@@ -32,16 +32,9 @@ public class Board {
         this.board = b.getBoard();
     }
 
-    public int getNumConflicts() {
-        return Helper.findConflicts(this.queens);
-    }
 
     public int[][] getBoard() {
         return board;
-    }
-
-    public void setBoard(int[][] board) {
-        this.board = board;
     }
 
     public String printBoard() {
@@ -50,7 +43,7 @@ public class Board {
         StringBuilder inString = new StringBuilder();
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
-                inString.append(" ").append(board[i][j]);
+                inString.append(board[i][j]).append(" ");
             }
             inString.append("\n");
         }
@@ -60,10 +53,6 @@ public class Board {
 
     public Queen[] getQueens() {
         return queens;
-    }
-
-    public void setQueens(Queen[] queens) {
-        this.queens = queens;
     }
 
     private void updateBoard() {

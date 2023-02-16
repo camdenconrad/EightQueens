@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c6bdb258-87cf-4729-919f-303c7a71d3e3" name="Changes" comment="First commit">
+    <list default="true" id="c6bdb258-87cf-4729-919f-303c7a71d3e3" name="Changes" comment="First working model">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/EightQueens/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EightQueens/Board.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/EightQueens/Helper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EightQueens/Helper.java" afterDir="false" />
@@ -76,7 +76,7 @@
       <workItem from="1676571741131" duration="242000" />
       <workItem from="1676572054102" duration="24000" />
       <workItem from="1676572085241" duration="2866000" />
-      <workItem from="1676576034810" duration="7898000" />
+      <workItem from="1676576034810" duration="8513000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1676581538042</created>
@@ -85,7 +85,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676581538042</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="First working model">
+      <created>1676584018354</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1676584018354</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -104,7 +111,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="First commit" />
+    <MESSAGE value="First working model" />
+    <option name="LAST_COMMIT_MESSAGE" value="First working model" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

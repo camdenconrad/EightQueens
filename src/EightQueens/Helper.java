@@ -4,11 +4,11 @@ import java.awt.*;
 
 public class Helper {
 
+    public static int h;
+
     public static void setH(int h) {
         Helper.h = h;
     }
-
-    public static int h;
 
     public static boolean inConflict(Point p1, Point p2) {
 
@@ -33,10 +33,8 @@ public class Helper {
                 if (inConflict(q1.getPosition(), q2.getPosition())) {
 
                     q1.setInConflict();
-                    q1.addConflict(q2);
 
                     q2.setInConflict();
-                    q2.addConflict(q1);
 
                     conflicts++;
                 }

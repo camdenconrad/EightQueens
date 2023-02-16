@@ -2,7 +2,7 @@ package EightQueens;
 
 public class NeighborStates {
 
-    private final Board[] states = new Board[128];
+    private final Board[] states = new Board[256];
 
     public NeighborStates(Board b) {
         // fix a conflict
@@ -38,8 +38,6 @@ public class NeighborStates {
                     q.setPosition(bestX, q.getPosition().y);
                     nWithLowerH++;
                 }
-
-
 
             }
         }

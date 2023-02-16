@@ -3,6 +3,11 @@ package EightQueens;
 public class Main {
     public static void main(String[] args) {
 
+        System.out.println("START.");
+
+        int restarts = 0;
+        int stateChanges = 0;
+
         Board neighbor = Helper.bestNeighbor(new NeighborStates(new Board()).getStates());
 
         int conflicts = Helper.findConflicts(neighbor.getQueens());
@@ -15,20 +20,25 @@ public class Main {
             System.out.print(neighbor.printBoard());
 
             System.out.println("Neighbors found with lower h: " + Helper.currentH());
+            System.out.println("Setting new current state");
+            stateChanges++;
 //
             if (!(Helper.findConflicts(neighbor.getQueens()) < conflicts)) {
                 neighbor.restart();
                 System.out.println("RESTARTED");
+                restarts++;
             }
 
             conflicts = Helper.findConflicts(neighbor.getQueens());
         }
 
         System.out.println("Current h: " + conflicts);
-        System.out.println("Current State");
+        System.out.println("\nCurrent State");
 
         System.out.print(neighbor.printBoard());
         System.out.println("Solution found!");
+        System.out.println("State changes: " + stateChanges);
+        System.out.println("Restarts: " + restarts);
 
 
     }
