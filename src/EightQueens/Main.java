@@ -20,12 +20,12 @@ public class Main {
             System.out.print(neighbor.printBoard());
 
             System.out.println("Neighbors found with lower h: " + Helper.currentH());
-            System.out.println("Setting new current state");
+            System.out.println("Setting new current state\n");
             stateChanges++;
 //
             if (!(Helper.findConflicts(neighbor.getQueens()) < conflicts)) {
                 neighbor.restart();
-                System.out.println("RESTARTED");
+                System.out.println("RESTARTED\n");
                 restarts++;
             }
 

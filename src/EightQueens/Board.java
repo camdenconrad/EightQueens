@@ -6,21 +6,24 @@ public class Board {
     // has 8 queens
     // an 8 x 8
 
-    public Queen[] queens = new Queen[8];
-    private int[][] board = new int[8][8];
+    public int boardSize = 8;
+    public Queen[] queens = new Queen[boardSize];
+    public int h;
+    private int[][] board = new int[boardSize][boardSize];
 
     public Board() {
 
+
         // initialize board to 0s
-        for (int i = 0; i < 8; i++) {
-            for (int j = 0; j < 8; j++) {
+        for (int i = 0; i < boardSize; i++) {
+            for (int j = 0; j < boardSize; j++) {
                 board[i][j] = 0;
             }
         }
 
         // add eight queens
-        for (int i = 0; i < 8; i++) {
-            int random = new java.util.Random().nextInt(8);
+        for (int i = 0; i < boardSize; i++) {
+            int random = new java.util.Random().nextInt(boardSize);
 
             board[random][i] = 1;
             queens[i] = new Queen(new Point(random, i));
@@ -32,6 +35,13 @@ public class Board {
         this.board = b.getBoard();
     }
 
+    public int getBoardSize() {
+        return boardSize;
+    }
+
+    public void setBoardSize(int boardSize) {
+        this.boardSize = boardSize;
+    }
 
     public int[][] getBoard() {
         return board;
@@ -41,8 +51,8 @@ public class Board {
         this.updateBoard();
 
         StringBuilder inString = new StringBuilder();
-        for (int i = 0; i < 8; i++) {
-            for (int j = 0; j < 8; j++) {
+        for (int i = 0; i < boardSize; i++) {
+            for (int j = 0; j < boardSize; j++) {
                 inString.append(board[i][j]).append(" ");
             }
             inString.append("\n");
@@ -57,8 +67,8 @@ public class Board {
 
     private void updateBoard() {
         // update board
-        for (int i = 0; i < 8; i++) {
-            for (int j = 0; j < 8; j++) {
+        for (int i = 0; i < boardSize; i++) {
+            for (int j = 0; j < boardSize; j++) {
                 board[i][j] = 0;
             }
         }
@@ -71,15 +81,15 @@ public class Board {
     protected void restart() {
 
         // initialize board to 0s
-        for (int i = 0; i < 8; i++) {
-            for (int j = 0; j < 8; j++) {
+        for (int i = 0; i < boardSize; i++) {
+            for (int j = 0; j < boardSize; j++) {
                 board[i][j] = 0;
             }
         }
 
         // add eight queens
-        for (int i = 0; i < 8; i++) {
-            int random = new java.util.Random().nextInt(8);
+        for (int i = 0; i < boardSize; i++) {
+            int random = new java.util.Random().nextInt(boardSize);
 
             board[random][i] = 1;
             queens[i] = new Queen(new Point(random, i));

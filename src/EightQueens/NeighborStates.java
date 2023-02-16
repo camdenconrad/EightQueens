@@ -17,29 +17,16 @@ public class NeighborStates {
         int nWithLowerH = 0;
         for (Board state : states) {
 
-            Queen q = state.getQueens()[new java.util.Random().nextInt(8)];
+            TaskThread thread = new TaskThread();
+            int startNumConflicts = Helper.findConflicts(state.queens);
 
-            if (q.inConflict()) {
+            state = thread.run(state);
 
-                int bestX = q.getPosition().x;
-                int startNumConflicts = Helper.findConflicts(state.queens);
-
-                q.setPosition(0, q.getPosition().y);
-
-                while (q.getPosition().x < 7) {
-
-                    q.moveDown();
-                    if (Helper.findConflicts(state.queens) < startNumConflicts) {
-                        bestX = q.getPosition().x;
-                    }
-                }
-
-                if (Helper.findConflicts(state.queens) <= startNumConflicts) {
-                    q.setPosition(bestX, q.getPosition().y);
-                    nWithLowerH++;
-                }
-
+            if (Helper.findConflicts(state.queens) <= startNumConflicts) {
+                nWithLowerH++;
             }
+
+
         }
 
         Helper.setH(nWithLowerH);
@@ -48,4 +35,6 @@ public class NeighborStates {
     public Board[] getStates() {
         return states;
     }
+
+
 }
