@@ -4,6 +4,12 @@ import java.awt.*;
 
 public class Helper {
 
+    public static void setH(int h) {
+        Helper.h = h;
+    }
+
+    public static int h;
+
     public static boolean inConflict(Point p1, Point p2) {
 
         double slope = (p2.getY() - p1.getY()) / (p2.getX() - p1.getX());
@@ -41,17 +47,21 @@ public class Helper {
         return conflicts;
     }
 
-    public Board bestNeighbor(Board[] states) {
+    public static Board bestNeighbor(Board[] states) {
         int bestBoard = 0;
 
 
-        for(int i = 0; i < states.length; i++) {
-            if(Helper.findConflicts(states[i].getQueens()) < Helper.findConflicts(states[bestBoard].getQueens())) {
+        for (int i = 0; i < states.length; i++) {
+            if (Helper.findConflicts(states[i].getQueens()) < Helper.findConflicts(states[bestBoard].getQueens())) {
                 bestBoard = i;
             }
 
         }
 
         return states[bestBoard];
+    }
+
+    public static int currentH() {
+        return h;
     }
 }

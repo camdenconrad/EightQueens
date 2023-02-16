@@ -4,13 +4,17 @@ import java.awt.*;
 import java.util.ArrayList;
 
 public class Queen {
+    private final ArrayList<Queen> conflictsWith = new ArrayList<>();
     private Point position;
+    private boolean inConflict = false;
+
+    public Queen(Point position) {
+        this.position = position;
+    }
 
     public ArrayList<Queen> getConflictsWith() {
         return conflictsWith;
     }
-
-    private final ArrayList<Queen> conflictsWith = new ArrayList<>();
 
     public boolean inConflict() {
         return inConflict;
@@ -23,12 +27,6 @@ public class Queen {
     public void releaseConflict() {
         this.conflictsWith.clear();
         this.inConflict = false;
-    }
-
-    private boolean inConflict = false;
-
-    public Queen(Point position) {
-        this.position = position;
     }
 
     public Point getPosition() {

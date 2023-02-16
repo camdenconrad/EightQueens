@@ -1,24 +1,20 @@
 package EightQueens;
 
-public class NeighborStates extends Board {
+public class NeighborStates {
 
-    public Board[] getStates() {
-        return states;
-    }
+    private final Board[] states = new Board[128];
 
-    private final Board[] states = new Board[1];
     public NeighborStates(Board b) {
-        int conflicts = Helper.findConflicts(b.getQueens());
-
         // fix a conflict
         //for(Queen q : board.getQueens()) {
 
-        for(int i = 0; i < states.length; i++) {
+        for (int i = 0; i < states.length; i++) {
 
             states[i] = new Board(b);
         }
 
 
+        int nWithLowerH = 0;
         for (Board state : states) {
 
             Queen q = state.getQueens()[new java.util.Random().nextInt(8)];
@@ -26,21 +22,32 @@ public class NeighborStates extends Board {
             if (q.inConflict()) {
 
                 int bestX = q.getPosition().x;
-                int numConflicts = Helper.findConflicts(state.queens);
+                int startNumConflicts = Helper.findConflicts(state.queens);
 
                 q.setPosition(0, q.getPosition().y);
-                while (q.getPosition().x < 8) {
+
+                while (q.getPosition().x < 7) {
+
                     q.moveDown();
-                    if (Helper.findConflicts(state.queens) < numConflicts) {
+                    if (Helper.findConflicts(state.queens) < startNumConflicts) {
                         bestX = q.getPosition().x;
                     }
                 }
 
-                if (numConflicts > Helper.findConflicts(state.queens)) {
+                if (Helper.findConflicts(state.queens) <= startNumConflicts) {
                     q.setPosition(bestX, q.getPosition().y);
+                    nWithLowerH++;
                 }
+
+
 
             }
         }
+
+        Helper.setH(nWithLowerH);
+    }
+
+    public Board[] getStates() {
+        return states;
     }
 }

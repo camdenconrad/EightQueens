@@ -6,16 +6,7 @@ public class Board {
     // has 8 queens
     // an 8 x 8
 
-    public int getNumConflicts() {
-        return Helper.findConflicts(this.queens);
-    }
-
     public Queen[] queens = new Queen[8];
-
-    public int[][] getBoard() {
-        return board;
-    }
-
     private int[][] board = new int[8][8];
 
     public Board() {
@@ -38,7 +29,19 @@ public class Board {
 
     public Board(Board b) {
         this.queens = b.getQueens();
-        this.board = b.getBoard();;
+        this.board = b.getBoard();
+    }
+
+    public int getNumConflicts() {
+        return Helper.findConflicts(this.queens);
+    }
+
+    public int[][] getBoard() {
+        return board;
+    }
+
+    public void setBoard(int[][] board) {
+        this.board = board;
     }
 
     public String printBoard() {
@@ -53,10 +56,6 @@ public class Board {
         }
 
         return inString.toString();
-    }
-
-    public void setBoard(int[][] board) {
-        this.board = board;
     }
 
     public Queen[] getQueens() {
@@ -75,7 +74,7 @@ public class Board {
             }
         }
 
-        for(Queen q : queens) {
+        for (Queen q : queens) {
             board[q.getPosition().x][q.getPosition().y] = 1;
         }
     }
