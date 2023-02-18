@@ -1,0 +1,57 @@
+START.
+Current h (conflicts): 16
+Current State
+0 0 0 0 0 0 0 0
+0 0 0 0 1 0 0 0
+0 1 1 0 0 0 0 0
+0 0 0 0 0 0 0 1
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 1 0
+1 0 0 1 0 0 0 0
+0 0 0 0 0 1 0 0
+Neighbors found with lower h: 6
+Setting new current state
+
+Current h (conflicts): 4
+Current State
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 1 0 0 0 0 0
+0 1 0 0 0 0 0 1
+0 0 0 1 1 0 0 0
+1 0 0 0 0 1 1 0
+Neighbors found with lower h: 3
+Setting new current state
+
+RESTARTED
+
+Current h (conflicts): 14
+Current State
+0 0 0 1 0 0 0 0
+0 0 0 0 0 0 0 1
+0 0 0 0 1 0 0 0
+0 0 1 0 0 0 0 0
+1 0 0 0 0 0 0 0
+0 0 0 0 0 0 1 0
+0 1 0 0 0 0 0 0
+0 0 0 0 0 1 0 0
+Neighbors found with lower h: 0
+Setting new current state
+
+Current h (conflicts): 0
+
+Current State
+0 0 0 1 0 0 0 0
+0 0 0 0 0 0 0 1
+0 0 0 0 1 0 0 0
+0 0 1 0 0 0 0 0
+1 0 0 0 0 0 0 0
+0 0 0 0 0 0 1 0
+0 1 0 0 0 0 0 0
+0 0 0 0 0 1 0 0
+Solution found!
+State changes: 3
+Restarts: 1
+Total time: 74 ms

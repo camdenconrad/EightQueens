@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact name="EightQueensConrad:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/EightQueensConrad_jar</output-path>
+    <root id="root">
+      <element id="archive" name="EightQueensConrad.jar">
+        <element id="module-output" name="EightQueensConrad" />
+      </element>
+    </root>
+  </artifact>
+</component>
