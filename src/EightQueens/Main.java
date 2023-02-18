@@ -4,6 +4,7 @@ public class Main {
     public static void main(String[] args) {
 
         System.out.println("START.");
+        long time1 = System.currentTimeMillis();
 
         int restarts = 0;
         int stateChanges = 0;
@@ -22,7 +23,6 @@ public class Main {
             System.out.println("Neighbors found with lower h: " + Helper.currentH());
             System.out.println("Setting new current state\n");
             stateChanges++;
-//
             if (!(Helper.findConflicts(neighbor.getQueens()) < conflicts)) {
                 neighbor.restart();
                 System.out.println("RESTARTED\n");
@@ -31,6 +31,7 @@ public class Main {
 
             conflicts = Helper.findConflicts(neighbor.getQueens());
         }
+        long time2 = System.currentTimeMillis();
 
         System.out.println("Current h (conflicts): " + conflicts);
         System.out.println("\nCurrent State");
@@ -39,6 +40,8 @@ public class Main {
         System.out.println("Solution found!");
         System.out.println("State changes: " + stateChanges);
         System.out.println("Restarts: " + restarts);
+
+        System.out.println("Total time: " + (time2 - time1) + " ms");
 
 
     }

@@ -22,7 +22,7 @@ public class NeighborStates {
 
             state = thread.run(state);
 
-            if (Helper.findConflicts(state.queens) <= startNumConflicts) {
+            if (64 - Helper.findConflicts(state.queens) <= startNumConflicts) {
                 nWithLowerH++;
             }
 

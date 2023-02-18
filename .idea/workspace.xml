@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c6bdb258-87cf-4729-919f-303c7a71d3e3" name="Changes" comment="Added multithreading">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EightQueens/Helper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EightQueens/Helper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/EightQueens/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EightQueens/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EightQueens/NeighborStates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EightQueens/NeighborStates.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +73,10 @@
       <workItem from="1676571741131" duration="242000" />
       <workItem from="1676572054102" duration="24000" />
       <workItem from="1676572085241" duration="2866000" />
-      <workItem from="1676576034810" duration="11042000" />
+      <workItem from="1676576034810" duration="12754000" />
+      <workItem from="1676591554968" duration="12715000" />
+      <workItem from="1676671930863" duration="1590000" />
+      <workItem from="1676673543055" duration="1777000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1676581538042</created>
@@ -110,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676586825523</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added multithreading">
+      <created>1676587187650</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1676587187650</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
